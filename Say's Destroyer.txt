@@ -1,0 +1,17 @@
+if game.PlaceId == 2788229376 or 155615604 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Say's Destroyer", "DarkTheme")
+    local Main = Window:NewTab("Main")
+    local Teleports = Window:NewTab("Teleports")
+    local Misc = Window:NewTab("Misc")
+    local Combat = Window:NewTab("Combat")
+    local AutoFarms = Window:NewTab("AutoFarms")
+    local Credits = Window:NewTab("Credits")
+    local MainSection = Main:NewSection("Main")
+MainSection:NewSlider("WalkSpeed", "Changes The WalkSpeed, Sometimes this does not work and lags out ur game.", 10000, 16, function(s) -- 10000 (MaxValue) | 16 (MinValue)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+MainSection:NewSlider("Jumppower", "Changes the jumppower", 10000, 50, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+end)
+end
